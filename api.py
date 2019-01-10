@@ -22,5 +22,4 @@ def feed():
             return jsonify({'trace': traceback.format_exc()})
 
 if __name__ == '__main__':
-    port = 12345 or 5000
-    app.run(port=port, debug=True)
+    app.run(port=12345, host='0.0.0.0')

@@ -8,6 +8,10 @@ from model import get_recommendations
 
 app = Flask(__name__)
 
+@app.route('/', methods=['GET'])
+def root():
+    return "hello, world"
+
 @app.route('/feed', methods=['POST'])
 def feed():
         try:
